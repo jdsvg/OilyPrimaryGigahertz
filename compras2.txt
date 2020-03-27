@@ -1,0 +1,3 @@
+leche,3
+piña,2
+arroz,1

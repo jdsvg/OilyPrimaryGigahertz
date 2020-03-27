@@ -1,0 +1,5 @@
+leche,3000
+piña,6000
+arroz,1000
+Ahuyama,2000
+Panela,15000

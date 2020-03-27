@@ -1,0 +1,5 @@
+jabon,3000
+tapabocas,6000
+papas,1000
+platano,2000
+alberja,15000
