@@ -35,9 +35,11 @@ class mercado():
             if self.nombre == x:
               self.subtotal =self.productos[self.nombre]*self.cantidad
               self.total+=self.subtotal
+              self.compra.update({self.nombre:(self.cantidad,self.subtotal)})
               i=1
           if not i:
             print("El valor ingresado no existe")
+        print("Total a pagar: ",self.total)
     """
     ciclo='s'
     while ciclo=="s":
@@ -79,7 +81,10 @@ class mercado():
       if a >= 1000 and billete> 0 :
         print ('son: ',billete,' billetes de ',a)
       if a < 1000 and billete> 0 :
-        print ('son: ',billete,' monedas de ',a)     
+        print ('son: ',billete,' monedas de ',a)  
+
+  def datos_cliente(self):
+    self.nombreUser=input("Ingrese su nombre %s : "%(self.nombreUser))   
 
   def tickete(self):
     pausa=input("presione Enter para generar su factura")
@@ -88,6 +93,7 @@ class mercado():
     print(" ")
     print("Detalle de productos:")
     print("Nombre \t \tCantidad \t \tPrecioU \t \tValor")
+    #print (self.compra)
     for y in self.compra:
       print("%s \t \t%s \t \t%s \t \t%s "%(y,self.compra[y][0],self.productos[y],self.compra[y][1]))
       #print(y,self.cantidad,self.compra[y])
@@ -98,8 +104,7 @@ class mercado():
     print ("")
     print ("El total de su compra es : ",self.total)
  
-  def datos_cliente(self):
-    self.nombreUser=input("Ingrese su nombre %s : "%(self.nombreUser))
+  
 
 #nombre_producto,valor_unitari,unidades, valor_unitario * unidades 
 
@@ -111,5 +116,4 @@ a.imprimir()
 a.consulta(archivo2)
 a.devolver()
 a.datos_cliente()
-a.devolver()
 a.tickete()
